@@ -10,7 +10,7 @@ public class ObjectInjectionApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		Traingle traingle = (Traingle) context.getBean("traingle");
+		Traingle traingle = (Traingle) context.getBean("traingle-alias");
 		traingle.draw();
 	}
 
