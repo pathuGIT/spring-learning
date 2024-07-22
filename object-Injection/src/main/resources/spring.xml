@@ -3,10 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="traingle" class="com.wak.object_Injection.Traingle">
+    <bean id="traingle" class="com.wak.object_Injection.Traingle" name="traingle-name">
         <property name="pointA" ref="point1" />
-        <property name="pointB" ref="point2" />
-        <property name="pointC" ref="point3" />
+
+        <property name="pointB">
+            <bean class="com.wak.object_Injection.Point">
+                <property name="x" value="50"/>
+                <property name="y" value="50"/>
+            </bean>
+        </property>
+
+        <property name="pointC">
+            <bean id="point3" class="com.wak.object_Injection.Point">
+                <property name="x" value="0"/>
+                <property name="y" value="50"/>
+            </bean>
+        </property>
     </bean>
 
     <bean id="point1" class="com.wak.object_Injection.Point">
@@ -14,13 +26,5 @@
         <property name="y" value="0"/>
     </bean>
 
-    <bean id="point2" class="com.wak.object_Injection.Point">
-        <property name="x" value="50"/>
-        <property name="y" value="50"/>
-    </bean>
-
-    <bean id="point3" class="com.wak.object_Injection.Point">
-        <property name="x" value="0"/>
-        <property name="y" value="50"/>
-    </bean>
+    <alias name="traingle" alias="traingle-alias" />
 </beans>
