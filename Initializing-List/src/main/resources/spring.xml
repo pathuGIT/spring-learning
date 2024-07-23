@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="triangle" class="com.wak.Initializing_List.Triangle">
+        <property name="points">
+            <list>
+                <ref bean="point1"/>
+                <ref bean="point2"/>
+                <ref bean="point3"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="point1" class="com.wak.Initializing_List.Point">
+        <property name="x" value="50" />
+        <property name="y" value="0" />
+    </bean>
+    <bean id="point2" class="com.wak.Initializing_List.Point">
+        <property name="x" value="50" />
+        <property name="y" value="50" />
+    </bean>
+    <bean id="point3" class="com.wak.Initializing_List.Point">
+        <property name="x" value="0" />
+        <property name="y" value="50" />
+    </bean>
+</beans>
