@@ -18,4 +18,5 @@ All examples are inside [`spring-examples`](./spring-examples):
 - [object-Injection](./spring-examples/object-Injection): Object property injection examples.
 - [student-management-system](./spring-examples/student-management-system): Likely a sample Spring application for student management.
 
+- [Primary-QualifierDemo](./spring-examples/Primary-QualifierDemo): Demonstrates the use of @Primary and @Qualifier annotations for resolving multiple bean candidates in Spring. Shows how to control which bean is injected when multiple beans of the same type exist.
 > **Note:** To see the complete and up-to-date list, browse the [`spring-examples`](./spring-examples) directory.
